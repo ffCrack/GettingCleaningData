@@ -1,6 +1,7 @@
 The purpose of this assignment is to demonstrate the skill of getting and cleaning data. 
 This repo shows how different sets of data were acquired and processed. 
-ABOUT THE DATASET
+*The data:
+
 One of the most exciting areas in all of data science right now is wearable computing
 - see for example this article . Companies like Fitbit, Nike, and Jawbone Up are racing
 to develop the most advanced algorithms to attract new users. The data linked to from
