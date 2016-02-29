@@ -1,12 +1,7 @@
 The purpose of this assignment is to demonstrate the skill of getting and cleaning data. 
 This repo shows how different sets of data were acquired and processed. 
-*The data:
 
-One of the most exciting areas in all of data science right now is wearable computing
-- see for example this article . Companies like Fitbit, Nike, and Jawbone Up are racing
-to develop the most advanced algorithms to attract new users. The data linked to from
-the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone.
-A full description is available at the site where the data was obtained:
+One of the most exciting areas in all of data science right now is wearable computing - see for example this article . Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. 
 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
@@ -14,46 +9,18 @@ Here are the data for the project:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
+Code was provided for each step
+1. Merges the training and the test sets to create one data set.
+    All data sets were downloaded from the website. 
+2. Extracts only the measurements on the mean and standard deviation for each measurement.
+    The features contains mean() and std() were selected. 
+3. Uses descriptive activity names to name the activities in the data set
+    Activity_Label.txt was used as a reference of the description. 
+4. Appropriately labels the data set with descriptive variable names.
+    Participates were labeled with "ID"
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and     each subject.
+    The summary were created. 
 
-The companion R script called run_analysis.R does the following.
-
-1) Merges the training and the test sets to create one data set.
-
-Input Files:
-'features.txt': List of all features.
-'activity_labels.txt': Links the class labels with their activity name.
-subject_train.txt': Each row identifies the subject who performed the activity for each window sample. 
-                    Its range is from 1 to 30. 
-'train/X_train.txt': Training set.
-'train/y_train.txt': Training labels.
-
-subject_test.txt': Each row identifies the subject who performed the activity for each window sample. 
-                    Its range is from 1 to 30. 
-'test/X_test.txt': Test set.
-test/y_test.txt': Test labels.
-
-The companion code provides a detailed comments of the steps to merge the datasets.
- A summary of the steps is as follows:
-a) Files are downloaded an unzip
-b) The input files mentioned above are read in R 
-c) Some data conditionungg is performed to improve the names of original columns and 
-    some conversions are done for the name activities as a preparation before the merge of the
-    training and test dataset.
-d) The merged dataset is called "mdata01"	
-
-2) Extracts only the measurements on the mean and standard deviation for each measurement.
-a) The extraction is done in 3 steps as it is explained in the code.
-
-3) Uses descriptive activity names to name the activities in the data set
-a) The names can be seen in the final files
-
-4) Appropriately labels the data set with descriptive variable names.
-   The name of the first file is: tidyfinal.txt
-5) From the data set in step 4, creates a second, independent tidy data set with the average
-  of each variable for each activity and each subject.
-   The name of the second file is: sumtidyfinal.txt
-
-  
 REFERENCES
 
 [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
